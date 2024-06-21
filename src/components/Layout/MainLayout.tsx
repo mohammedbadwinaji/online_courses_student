@@ -179,13 +179,14 @@ export default function MainLayout() {
 																					coursesNavigation.forEach((a) => {
 																						a.classList.add("hidden");
 																					});
+
 																					document.querySelectorAll(
 																						`a.courseNavigation`
 																					);
 
 																					document
 																						.querySelector(
-																							`a[href="/courses/${category.name}"] ul`
+																							`a[href="#/courses/${category.name.toLowerCase()}"] ul`
 																						)
 																						?.classList.remove("hidden");
 																				}}
