@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
-import CourseLandingPage from "../../data/CourseLandingPage.json";
-import RateComponent from "../ui/RateComponent";
-import CourseImage from "../../assets/images/course2.jpg";
+import CourseLandingPage from "../data/CourseLandingPage.json";
+import RateComponent from "../components/ui/RateComponent";
+import CourseImage from "../assets/images/course2.jpg";
 import {
 	ArrowDownIcon,
 	ArrowRightIcon,

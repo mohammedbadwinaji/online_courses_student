@@ -82,6 +82,7 @@ export default function MainLayout() {
 	);
 
 	const [navigationState, setNavigationState] = useState(navigation);
+
 	window.onmousedown = (ev) => {
 		if (
 			(ev.target as HTMLElement).tagName === "A" &&

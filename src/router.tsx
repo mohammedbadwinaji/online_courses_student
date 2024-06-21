@@ -1,21 +1,21 @@
-import {  createHashRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import MainLayout from "./components/Layout/MainLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Profile from "./pages/Profile";
-import Courses from "./pages/Courses";
 import Contact from "./pages/Contact";
 import GuestLayout from "./components/Layout/GuestLayout";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import PageNotFound from "./pages/PageNotFound";
-import CourseInfo from "./components/Course/CourseInfo";
-import CoursesView from "./components/Course/CoursesView";
+
 import EditProfile from "./pages/EditProfile";
 import Teach from "./pages/Teach";
 import EnrolledCourses from "./pages/EnrolledCourses";
 import WishistCourses from "./pages/WishistCourses";
 import Cart from "./pages/Cart";
+import CourseInfo from "./pages/CourseInfo";
+import CoursesView from "./pages/CourseView";
 
 export const router = createHashRouter([
 	{
@@ -42,23 +42,18 @@ export const router = createHashRouter([
 				path: "/user/:id",
 				element: <Profile />,
 			},
+
 			{
-				path: "/",
-				element: <Courses />,
-				children: [
-					{
-						path: "courses/:category",
-						element: <CoursesView />,
-					},
-					{
-						path: "courses/:category/:subCategory",
-						element: <CoursesView />,
-					},
-					{
-						path: "courses/course/:id",
-						element: <CourseInfo />,
-					},
-				],
+				path: "courses/:category",
+				element: <CoursesView />,
+			},
+			{
+				path: "courses/:category/:subCategory",
+				element: <CoursesView />,
+			},
+			{
+				path: "courses/course/:id",
+				element: <CourseInfo />,
 			},
 			{
 				path: "/contact",
@@ -79,21 +74,21 @@ export const router = createHashRouter([
 				],
 			},
 			{
-				path: '/teach',
-				element: <Teach />
+				path: "/teach",
+				element: <Teach />,
 			},
 			{
-				path: '/enrolledcourses',
-				element: <EnrolledCourses />
+				path: "/enrolledcourses",
+				element: <EnrolledCourses />,
 			},
 			{
-				path: '/wishistcourses',
-				element: <WishistCourses />
+				path: "/wishistcourses",
+				element: <WishistCourses />,
 			},
 			{
-				path: '/cart',
-				element: <Cart />
-			}
+				path: "/cart",
+				element: <Cart />,
+			},
 		],
 	},
 
