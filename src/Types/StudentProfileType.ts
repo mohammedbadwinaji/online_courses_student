@@ -8,8 +8,6 @@ export type StudentProfileType ={
 	image: string;
 	bio: string;
 	headline: string;
-	studentCount: number;
-	reviewsCount: number;
 	socialMedia: SocialMediaType;
 	enrolledCourses: CouresViewType[];
 	WishistCourses: CouresViewType[];
